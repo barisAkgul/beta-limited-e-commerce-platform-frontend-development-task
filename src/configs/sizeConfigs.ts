@@ -1,6 +1,6 @@
 const sizeConfigs = {
   sidebar: {
-    width: "300px",
+    width: "24%",
   },
   header: {
     height: "80px",
