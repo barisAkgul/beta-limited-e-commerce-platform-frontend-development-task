@@ -13,8 +13,6 @@ import useSessionStore from "./stores/session-store";
 function App() {
   const { sessionId, checkSessionID } = useSessionStore();
 
-  console.log(sessionId);
-
   useEffect(() => {
     checkSessionID();
   }, []);
