@@ -1,13 +1,18 @@
 import { Box, Stack } from "@mui/material";
+
+//files
 import sizeConfigs from "~/configs/sizeConfigs";
 import colorConfigs from "~/configs/colorConfigs";
+
+//components
+import Header from "~/containers/header/Header";
 
 type Props = {};
 
 const MainLayouts = (props: Props) => {
   return (
     <Box sx={{ backgroundColor: colorConfigs.mainBg }}>
-      Header
+      <Header />
       <Stack
         sx={{
           flexDirection: "row",
