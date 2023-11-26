@@ -7,6 +7,7 @@ import colorConfigs from "~/configs/colorConfigs";
 //components
 import Header from "~/containers/header/Header";
 import MainSection from "~/components/main-section";
+import Sidebar from "~/containers/sidebar/Sidebar";
 
 type Props = {};
 
@@ -29,7 +30,7 @@ const MainLayouts = (props: Props) => {
             display: { xs: "none", sm: "none", md: "block" },
           }}
         >
-          SideBar
+          <Sidebar />
         </Box>
 
         <Box
