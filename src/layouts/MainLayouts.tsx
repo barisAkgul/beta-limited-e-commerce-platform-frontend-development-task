@@ -6,6 +6,7 @@ import colorConfigs from "~/configs/colorConfigs";
 
 //components
 import Header from "~/containers/header/Header";
+import MainSection from "~/components/main-section";
 
 type Props = {};
 
@@ -40,7 +41,7 @@ const MainLayouts = (props: Props) => {
             flex: { sx: 1, md: 2 },
           }}
         >
-          MainSection
+          <MainSection />
         </Box>
       </Stack>
     </Box>
