@@ -1,7 +1,10 @@
 import { Stack, Box } from "@mui/material";
 
+//Files
 import sizeConfigs from "~/configs/sizeConfigs";
 import colorConfigs from "~/configs/colorConfigs";
+
+//Components
 import Logo from "~/components/header/Logo";
 import SearchBar from "~/components/header/SearchBar";
 import IconSection from "~/components/header/IconSection";
