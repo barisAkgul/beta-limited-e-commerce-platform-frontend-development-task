@@ -18,7 +18,6 @@ const SidebarItem = ({ item }: Props) => {
         },
         // backgroundColor:
         //   appState === item.state ? colorConfigs.sidebar.activeBg : "unset",
-        paddingY: "12px",
         paddingX: "10px",
       }}
     >
