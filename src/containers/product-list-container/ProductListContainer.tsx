@@ -9,16 +9,8 @@ import ProductCardSkeleton from "~/components/common/skeleton/ProductCardSkeleto
 const ProductListContainer: React.FC = () => {
   const { response, error, loading } = useFetch(getProductsList);
 
-  if (loading) {
-    console.log("loading:");
-  }
-
   if (error) {
     console.error("Error:", error);
-  }
-
-  if (response) {
-    console.log("Data:", response);
   }
 
   return (

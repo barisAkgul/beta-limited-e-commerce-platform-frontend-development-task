@@ -20,3 +20,5 @@ export interface IShoppingCartItemProps {
   name: string;
   price: number;
 }
+
+export type ShoppingCartResponse = IShoppingCartItemProps[] | string;

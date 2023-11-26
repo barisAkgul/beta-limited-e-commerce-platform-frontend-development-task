@@ -129,7 +129,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
               </Typography>
             </Box>
           </Box>
-          <ProductCardButtons />
+          <ProductCardButtons id={id} />
         </CardContent>
       </Card>
     </Grid>

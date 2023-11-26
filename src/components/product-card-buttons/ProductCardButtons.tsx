@@ -1,13 +1,41 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { Typography, Button, Box } from "@mui/material";
 
+//Icons
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import RemoveOutlinedIcon from "@mui/icons-material/RemoveOutlined";
 
-type Props = {};
+//Stores
+import useShoppingCart from "~/stores/shopping-cart-store";
+import useSessionStore from "~/stores/session-store";
+import { IShoppingCartItemProps } from "~/types/general";
 
-const ProductCardButtons = (props: Props) => {
-  const [cartItems, setCartItems] = useState<number>(1);
+type Props = {
+  id: string;
+};
+
+const ProductCardButtons = ({ id }: Props) => {
+  const { sessionId } = useSessionStore();
+  const {
+    updateCartItems,
+    handleAddToCart,
+    handleRemoveFromCart,
+    shoppingCart,
+  } = useShoppingCart();
+
+  const cartItemCount =
+    (Array.isArray(shoppingCart) &&
+      shoppingCart
+        .filter(
+          (item): item is IShoppingCartItemProps => typeof item !== "string"
+        )
+        .find((item) => item.productId === id)?.quantity) ||
+    0;
+
+  useEffect(() => {
+    updateCartItems(sessionId || "");
+  }, []);
+
   return (
     <Box
       sx={{
@@ -15,13 +43,13 @@ const ProductCardButtons = (props: Props) => {
         paddingTop: "36px",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: cartItems < 1 ? "flex-end" : "space-between",
+        justifyContent: cartItemCount < 1 ? "flex-end" : "space-between",
       }}
     >
-      {cartItems > 0 && (
+      {cartItemCount > 0 && (
         <>
           <Button
-            // onClick={handleRemoveFromCart}
+            onClick={() => handleRemoveFromCart(id, sessionId || "")}
             sx={{
               backgroundColor: "inherit",
               border: "1px solid rgb(210,63,87) ",
@@ -36,12 +64,12 @@ const ProductCardButtons = (props: Props) => {
               fontWeight: "500",
             }}
           >
-            {cartItems}
+            {cartItemCount}
           </Typography>
         </>
       )}
       <Button
-        // onClick={handleAddToCart}
+        onClick={() => handleAddToCart(id, sessionId || "")}
         sx={{
           backgroundColor: "inherit",
           border: "1px solid rgb(210,63,87) ",
