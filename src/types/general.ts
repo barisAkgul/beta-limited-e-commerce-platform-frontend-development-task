@@ -1,13 +1,22 @@
-import { ReactNode } from "react";
+export interface IProductItemProps {
+  id: string;
+  name: string;
+  price: number;
+  originalPrice: number;
+  rating: number;
+  image: string;
+  discount: string;
+}
 
-export type RouteType = {
-  element: ReactNode;
-  state: string;
-  index?: boolean;
-  path?: string;
-  child?: RouteType[];
-  sidebarProps?: {
-    displayText: string;
-    icon?: ReactNode;
-  };
-};
+export type ProductListResponse = IProductItemProps[];
+
+export interface ISessionIDProps {
+  id: string | null;
+}
+
+export interface IShoppingCartItemProps {
+  productId: string;
+  quantity: number;
+  name: string;
+  price: number;
+}
