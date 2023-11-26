@@ -12,6 +12,10 @@ const colorConfigs = {
     color: "#000",
   },
   mainBg: "#F7F9FC",
+  general: {
+    primary: "rgb(194, 75, 90)",
+    secondary: "rgb(227, 54, 78)",
+  },
 };
 
 export default colorConfigs;
