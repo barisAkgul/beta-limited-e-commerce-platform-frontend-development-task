@@ -1,4 +1,4 @@
-import { RouteType } from "~/types/general";
+import { RouteType } from "~/types/routeTypes";
 
 //Pages
 import HomePage from "~/pages/home-page/HomePage";

@@ -13,7 +13,7 @@ import SidebarItem from "./SidebarItem";
 
 //Files
 import colorConfigs from "../../configs/colorConfigs";
-import { RouteType } from "~/types/general";
+import { RouteType } from "~/types/routeTypes";
 
 //İcons
 import NavigateNextOutlinedIcon from "@mui/icons-material/NavigateNextOutlined";
