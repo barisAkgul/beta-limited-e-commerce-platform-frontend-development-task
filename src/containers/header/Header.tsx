@@ -1,7 +1,10 @@
-import { Stack } from "@mui/material";
+import { Stack, Box } from "@mui/material";
 
 import sizeConfigs from "~/configs/sizeConfigs";
 import colorConfigs from "~/configs/colorConfigs";
+import Logo from "~/components/header/Logo";
+import SearchBar from "~/components/header/SearchBar";
+import IconSection from "~/components/header/IconSection";
 
 type Props = {};
 
@@ -21,7 +24,14 @@ const Header = (props: Props) => {
         zIndex: "9999",
       }}
     >
-      Header
+      <Logo />
+      <Box
+        sx={{ width: "50%", display: { xs: "none", sm: "none", md: "block" } }}
+      >
+        <SearchBar />
+      </Box>
+
+      <IconSection />
     </Stack>
   );
 };
