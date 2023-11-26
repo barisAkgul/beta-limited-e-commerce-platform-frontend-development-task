@@ -8,6 +8,7 @@ import {
   styled,
   Rating,
   Box,
+  Skeleton,
 } from "@mui/material";
 
 //Files
@@ -61,12 +62,13 @@ const ProductCard: React.FC<ProductCardProps> = ({
         >
           {discount}
         </Typography>
+
         <CardMedia
           component="img"
           height="50%"
           image={imageError ? FALLBACKIMG : image}
           alt="Product Image"
-          style={{ backgroundColor: "rgb(239, 239, 239)" }}
+          style={{ backgroundColor: "rgb(239, 239, 239)", minHeight: "250px" }}
           onError={handleImageError}
         />
         <CardContent
