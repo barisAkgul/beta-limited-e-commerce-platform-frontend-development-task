@@ -1,7 +1,6 @@
 import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
 import { getSessionID } from "~/helpers/api/requests";
-import { ISessionIDProps } from "~/types/general";
 
 interface SessionStore {
   sessionId: string | null;
