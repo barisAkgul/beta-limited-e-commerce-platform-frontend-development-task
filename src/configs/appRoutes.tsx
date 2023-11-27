@@ -65,7 +65,7 @@ const appRoutes: RouteType[] = [
         element: <HomePage />,
         state: "home",
         sidebarProps: {
-          displayText: "Domato",
+          displayText: "Potato",
         },
       },
     ],
@@ -97,7 +97,7 @@ const appRoutes: RouteType[] = [
   {
     path: "/",
     element: <HomePage />,
-    state: "changelog",
+    state: "home",
     sidebarProps: {
       displayText: "Dariry & Eggs",
       icon: <BottleIcon />,
@@ -106,12 +106,12 @@ const appRoutes: RouteType[] = [
       {
         index: true,
         element: <HomePage />,
-        state: "dashboard.index",
+        state: "index",
       },
       {
         path: "/",
         element: <HomePage />,
-        state: "dashboard.default",
+        state: "eggs",
         sidebarProps: {
           displayText: "Eggs",
         },
