@@ -25,7 +25,7 @@ const ProductListContainer: React.FC = () => {
         mb={2}
         sx={{ color: "white", fontSize: "28px" }}
       >
-        <span style={{ color: "rgb(45,52,68)" }}>Pears, apple,quinces</span>
+        <span style={{ color: "rgb(45,52,68)" }}>Pears, apple, quinces</span>
       </Typography>
       <ProductList>
         {loading ? (

@@ -67,7 +67,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
           height="50%"
           image={imageError ? FALLBACKIMG : image}
           alt="Product Image"
-          style={{ backgroundColor: "rgb(239, 239, 239)", minHeight: "250px" }}
+          style={{ backgroundColor: "rgb(239, 239, 239)", minHeight: "332px" }}
           onError={handleImageError}
         />
         <CardContent

@@ -23,7 +23,7 @@ const ProductCardSkeleton = () => {
         <Skeleton
           variant="rectangular"
           width="100%"
-          height={200}
+          height={333}
           animation="wave"
         />
         <CardContent
@@ -35,10 +35,10 @@ const ProductCardSkeleton = () => {
             padding: "12px",
           }}
         >
-          <Skeleton variant="text" width="80%" height={20} animation="wave" />
-          <Skeleton variant="text" width="50%" height={20} animation="wave" />
-          <Skeleton variant="text" width="60%" height={20} animation="wave" />
-          <Skeleton variant="text" width="80%" height={20} animation="wave" />
+          <Skeleton variant="text" width="80%" height={22} animation="wave" />
+          <Skeleton variant="text" width="50%" height={22} animation="wave" />
+          <Skeleton variant="text" width="60%" height={22} animation="wave" />
+          <Skeleton variant="text" width="80%" height={22} animation="wave" />
         </CardContent>
       </Card>
     </Grid>

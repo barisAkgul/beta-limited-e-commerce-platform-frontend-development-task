@@ -31,12 +31,10 @@ const MainLayouts = () => {
         >
           <Sidebar />
         </Box>
-
         <Box
           p={3}
           sx={{
             overflowY: "auto",
-
             height: "auto",
             flex: { sx: 1, md: 2 },
           }}

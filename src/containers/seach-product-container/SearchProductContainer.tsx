@@ -17,7 +17,7 @@ const SearchProductContainer = ({ query }: Props) => {
   const [products, setProducts] = useState<ProductListResponse>([]);
 
   useEffect(() => {
-    const fetchData = async (query: any) => {
+    const fetchData = async (query: string) => {
       try {
         setLoading(true);
         setError(null);
@@ -38,28 +38,37 @@ const SearchProductContainer = ({ query }: Props) => {
     return <div>Error: {error.message}</div>;
   }
 
+  const productListContent =
+    products.length > 0 ? (
+      <ProductList>
+        {products.map((product) => (
+          <ProductCard key={product.id} {...product} />
+        ))}
+      </ProductList>
+    ) : (
+      <Typography>No results found.</Typography>
+    );
+
   return (
-    <Box p={2}>
-      <Typography variant="h5" fontWeight={700} color="rgb(45, 52, 68)">
+    <Box paddingX={2}>
+      <Typography
+        variant="h5"
+        fontWeight={700}
+        color="rgb(45, 52, 68)"
+        paddingBottom="8px"
+      >
         Search Results for <span style={{ color: "#FC1503" }}>{query}</span>
       </Typography>
-      {products.length === 0 && <Typography>No results found.</Typography>}
 
-      <ProductList>
-        {loading ? (
-          <>
-            <ProductCardSkeleton />
-            <ProductCardSkeleton />
-            <ProductCardSkeleton />
-          </>
-        ) : (
-          <>
-            {products?.map((product) => (
-              <ProductCard key={product.id} {...product} />
-            ))}
-          </>
-        )}
-      </ProductList>
+      {loading ? (
+        <ProductList>
+          <ProductCardSkeleton />
+          <ProductCardSkeleton />
+          <ProductCardSkeleton />
+        </ProductList>
+      ) : (
+        productListContent
+      )}
     </Box>
   );
 };
