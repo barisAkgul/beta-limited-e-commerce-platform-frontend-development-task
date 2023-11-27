@@ -7,9 +7,7 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import useShoppingCart from "~/stores/shopping-cart-store";
 import { countDistinctProducts } from "~/helpers/utils/general";
 
-type Props = {};
-
-const IconSection = (props: Props) => {
+const IconSection = () => {
   const { shoppingCart } = useShoppingCart();
   const distinctProductCount = countDistinctProducts(shoppingCart);
   return (

@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, CardContent, Typography, Skeleton, Grid } from "@mui/material";
 
 const ProductCardSkeleton = () => {
