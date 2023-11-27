@@ -31,7 +31,7 @@ const ProductList: React.FC<ProductListProps> = ({ children }) => {
           type="submit"
           sx={{
             "&:hover": {
-              backgroundColor: colorConfigs.general.secondary, // İstediğiniz özel hover rengini burada belirtin
+              backgroundColor: colorConfigs.general.secondary,
             },
             marginTop: "30px",
             p: "6px 16px",

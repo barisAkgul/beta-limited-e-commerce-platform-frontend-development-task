@@ -1,33 +1,33 @@
 import axios from "axios";
 
+import { BASE_URL, ENDPOINDS } from "./constants";
+
 import {
   ISessionIDProps,
   IShoppingCartItemProps,
   ProductListResponse,
   ShoppingCartResponse,
 } from "~/types/general";
+
 import { _getApiRequest } from "./request.helper";
 
 // GET REQUESTS
 
 export const getProductsList = (): Promise<ProductListResponse> =>
   _getApiRequest({
-    requestEndpoint:
-      "https://linkedin-cv-crawler.beta-limited.workers.dev/interview/products",
+    requestEndpoint: `${BASE_URL}${ENDPOINDS.PRODUCTS}`,
   });
 
 export const getSessionID = (): Promise<ISessionIDProps> =>
   _getApiRequest({
-    requestEndpoint:
-      "https://linkedin-cv-crawler.beta-limited.workers.dev/interview/createsession",
+    requestEndpoint: `${BASE_URL}${ENDPOINDS.CREATESESSION}`,
   });
 
 export const getShoppingCartList = (
   sessionId: string | undefined
 ): Promise<ShoppingCartResponse> =>
   _getApiRequest({
-    requestEndpoint:
-      "https://linkedin-cv-crawler.beta-limited.workers.dev/interview/view-cart",
+    requestEndpoint: `${BASE_URL}${ENDPOINDS.VIEWCART}`,
     sessionId,
   });
 
@@ -35,7 +35,7 @@ export const getSearchProductListWithName = (
   productName: string
 ): Promise<ProductListResponse> =>
   _getApiRequest({
-    requestEndpoint: `https://linkedin-cv-crawler.beta-limited.workers.dev/interview/search?name=${productName}`,
+    requestEndpoint: `${BASE_URL}${ENDPOINDS.SEARCH}?name=${productName}`,
   });
 
 //POST REQUESTS
@@ -45,7 +45,7 @@ export const addToCart = async (
   sessionId: string | null
 ) => {
   try {
-    const addToCartEndpoint = `https://linkedin-cv-crawler.beta-limited.workers.dev/interview/add-to-cart?id=${productId}`;
+    const addToCartEndpoint = `${BASE_URL}${ENDPOINDS.ADDTOCART}?id=${productId}`;
 
     await axios.post(
       addToCartEndpoint,
@@ -66,7 +66,7 @@ export const subtractFromCart = async (
   sessionId: string | null
 ) => {
   try {
-    const subtractFromCartEndpoint = `https://linkedin-cv-crawler.beta-limited.workers.dev/interview/subtract-from-cart?id=${productId}`;
+    const subtractFromCartEndpoint = `${BASE_URL}${ENDPOINDS.SUBTRACTFROMCART}?id=${productId}`;
 
     await axios.post(
       subtractFromCartEndpoint,

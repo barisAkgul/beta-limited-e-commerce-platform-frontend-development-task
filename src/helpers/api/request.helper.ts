@@ -13,7 +13,7 @@ export const _getApiRequest = async <T>({
   try {
     const config: AxiosRequestConfig = {};
 
-    // Eğer Session-ID verilmişse, isteğin başlıklarına eklenir
+    //If Session-ID is given, it is added to the headers of the request
     if (sessionId) {
       config.headers = {
         "Session-ID": sessionId,
