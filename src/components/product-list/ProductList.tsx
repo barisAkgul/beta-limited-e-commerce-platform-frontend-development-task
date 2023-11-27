@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
-import { Grid, Typography, Button, Box } from "@mui/material";
+import { Grid, Button, Box } from "@mui/material";
+import colorConfigs from "~/configs/colorConfigs";
 
 interface ProductListProps {
   children: ReactNode;
@@ -8,15 +9,6 @@ interface ProductListProps {
 const ProductList: React.FC<ProductListProps> = ({ children }) => {
   return (
     <>
-      <Typography
-        variant="h5"
-        fontWeight="bold"
-        mb={2}
-        sx={{ color: "white", fontSize: "28px" }}
-      >
-        <span style={{ color: "rgb(45,52,68)" }}>Pears, apple,quinces</span>
-      </Typography>
-
       <Grid container spacing={3}>
         <Grid item xs={12} md={12}>
           <Grid
@@ -38,6 +30,9 @@ const ProductList: React.FC<ProductListProps> = ({ children }) => {
         <Button
           type="submit"
           sx={{
+            "&:hover": {
+              backgroundColor: colorConfigs.general.secondary, // İstediğiniz özel hover rengini burada belirtin
+            },
             marginTop: "30px",
             p: "6px 16px",
             backgroundColor: "rgb(210, 63, 87);",

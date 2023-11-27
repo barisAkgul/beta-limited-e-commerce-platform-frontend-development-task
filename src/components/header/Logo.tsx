@@ -1,11 +1,14 @@
 import { Box } from "@mui/material";
+import { Link } from "react-router-dom";
 
 type Props = {};
 
 const Logo = (props: Props) => {
   return (
     <Box sx={{ height: "100%", display: "flex", alignItems: "center" }}>
-      <img src="/logo.png" style={{ height: "50px" }} />
+      <Link to="/">
+        <img src="/logo.png" style={{ height: "50px" }} alt="Logo" />
+      </Link>
     </Box>
   );
 };

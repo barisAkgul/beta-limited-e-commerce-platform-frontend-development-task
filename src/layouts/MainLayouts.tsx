@@ -8,6 +8,7 @@ import colorConfigs from "~/configs/colorConfigs";
 import Header from "~/containers/header/Header";
 import MainSection from "~/components/main-section";
 import Sidebar from "~/containers/sidebar/Sidebar";
+import SearchBar from "~/components/header/SearchBar";
 
 type Props = {};
 
@@ -42,6 +43,15 @@ const MainLayouts = (props: Props) => {
             flex: { sx: 1, md: 2 },
           }}
         >
+          <Box
+            sx={{
+              marginX: "auto",
+              width: "96%",
+              display: { xs: "block", sm: "block", md: "none" },
+            }}
+          >
+            <SearchBar />
+          </Box>
           <MainSection />
         </Box>
       </Stack>

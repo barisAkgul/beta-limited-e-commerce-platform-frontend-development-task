@@ -33,7 +33,7 @@ export const getShoppingCartList = (
 
 export const getSearchProductListWithName = (
   productName: string
-): Promise<IShoppingCartItemProps> =>
+): Promise<ProductListResponse> =>
   _getApiRequest({
     requestEndpoint: `https://linkedin-cv-crawler.beta-limited.workers.dev/interview/search?name=${productName}`,
   });

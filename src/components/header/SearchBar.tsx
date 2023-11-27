@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Paper, Button } from "@mui/material";
 
 //Icons
@@ -9,9 +10,16 @@ type Props = {};
 
 const SearchBar = (props: Props) => {
   const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
 
   const onhandleSubmit = (e: any) => {
     e.preventDefault();
+
+    if (searchTerm) {
+      navigate(`/search?name=${searchTerm}`);
+
+      setSearchTerm("");
+    }
   };
 
   return (
