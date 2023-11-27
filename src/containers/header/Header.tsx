@@ -9,9 +9,7 @@ import Logo from "~/components/header/Logo";
 import SearchBar from "~/components/header/SearchBar";
 import IconSection from "~/components/header/IconSection";
 
-type Props = {};
-
-const Header = (props: Props) => {
+const Header = () => {
   return (
     <Stack
       direction="row"

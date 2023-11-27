@@ -4,7 +4,6 @@ import { BASE_URL, ENDPOINDS } from "./constants";
 
 import {
   ISessionIDProps,
-  IShoppingCartItemProps,
   ProductListResponse,
   ShoppingCartResponse,
 } from "~/types/general";

@@ -1,5 +1,3 @@
-import { colors } from "@mui/material";
-
 const colorConfigs = {
   sidebar: {
     bg: "rgb(227, 233, 239)",

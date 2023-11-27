@@ -8,7 +8,6 @@ import {
   styled,
   Rating,
   Box,
-  Skeleton,
 } from "@mui/material";
 
 //Files
@@ -17,7 +16,7 @@ import { IProductItemProps } from "~/types/general";
 //Components
 import ProductCardButtons from "../product-card-buttons/ProductCardButtons";
 
-const Title = styled(Typography)(({ theme }) => ({
+const Title = styled(Typography)(({}) => ({
   fontSize: 14,
   fontWeight: 600,
   marginBottom: 4,

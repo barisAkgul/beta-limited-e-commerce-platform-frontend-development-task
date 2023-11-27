@@ -10,9 +10,7 @@ import MainSection from "~/components/main-section";
 import Sidebar from "~/containers/sidebar/Sidebar";
 import SearchBar from "~/components/header/SearchBar";
 
-type Props = {};
-
-const MainLayouts = (props: Props) => {
+const MainLayouts = () => {
   return (
     <Box sx={{ backgroundColor: colorConfigs.mainBg }}>
       <Header />

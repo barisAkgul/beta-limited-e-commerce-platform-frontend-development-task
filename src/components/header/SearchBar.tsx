@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Paper, Button } from "@mui/material";
 
@@ -6,9 +6,7 @@ import { Paper, Button } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import colorConfigs from "~/configs/colorConfigs";
 
-type Props = {};
-
-const SearchBar = (props: Props) => {
+const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
 

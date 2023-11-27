@@ -1,16 +1,7 @@
-import {
-  Avatar,
-  Drawer,
-  List,
-  Stack,
-  Toolbar,
-  Typography,
-  Divider,
-  Box,
-} from "@mui/material";
+import { List, Stack, Toolbar, Typography, Box } from "@mui/material";
 
 import colorConfigs from "../../configs/colorConfigs";
-import sizeConfigs from "../../configs/sizeConfigs";
+
 import appRoutes from "~/configs/appRoutes";
 import SidebarItem from "~/components/sidebar/SidebarItem";
 import SidebarItemCollapse from "~/components/sidebar/SidebarItemCollapse";
