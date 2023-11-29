@@ -20,7 +20,7 @@ const Header = () => {
         background: colorConfigs.header.bg,
         top: 0,
         justifyContent: "space-between",
-        padding: "0 48px 0 24px",
+        padding: { xs: "0 24px", sm: "0 24px", md: "0 48px 0 24px" },
         height: sizeConfigs.header.height,
         zIndex: "9999",
       }}
